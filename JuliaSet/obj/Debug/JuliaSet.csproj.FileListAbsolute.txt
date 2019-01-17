@@ -1,0 +1,9 @@
+E:\Documents\GitHub\JuliaSet\JuliaSet\bin\Debug\JuliaSet.exe.config
+E:\Documents\GitHub\JuliaSet\JuliaSet\bin\Debug\JuliaSet.exe
+E:\Documents\GitHub\JuliaSet\JuliaSet\bin\Debug\JuliaSet.pdb
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.formMain.resources
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.Properties.Resources.resources
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.csproj.GenerateResource.Cache
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.exe
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.pdb
