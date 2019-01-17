@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JuliaSet.Properties
+namespace FractalGenerator.Properties
 {
 
 

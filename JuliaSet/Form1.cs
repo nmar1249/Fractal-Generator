@@ -8,30 +8,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace JuliaSet
+namespace FractalGenerator
 {
-    public partial class formMain : Form
+
+    public partial class Form1 : Form
     {
-        
-        public formMain()
+
+        string height = "";
+        string width = "";
+        string fractalType = "";
+
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void formMain_Paint(object sender, PaintEventArgs e)
+        private void Width_TextBox_TextChanged(object sender, EventArgs e)
         {
-            Graphics g = e.Graphics;
+            width = Width_TextBox.Text;
+        }
 
-            Pen myPen = new Pen(Color.Red);
-            Brush myBrush = new SolidBrush(Color.Black);
+        private void Height_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            height = Height_TextBox.Text;
+        }
 
+        private void Fractal_List_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fractalType = Fractal_List.SelectedItem.ToString();
+        }
 
-            JuliaSet set = new JuliaSet(800, 600);
-
-            set.generate();
-
-            g.DrawImage(set.img, 0, 0);
-
+        private void button_Generate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FractalDisplay fd = new FractalDisplay(int.Parse(width), int.Parse(height), fractalType);
+                fd.Activate();
+                fd.Show();
+            }
+            catch(Exception ex)
+            {
+                //put an error message here at some point
+            }
         }
     }
 }

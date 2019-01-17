@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace JuliaSet
+namespace FractalGenerator
 {
+    //this class creates a julia set based on the specified w and h
+    //an image is stored in a bitmap var which can be saved using a function
     class JuliaSet
     {
         private int w;

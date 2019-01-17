@@ -1,0 +1,10 @@
+E:\Documents\GitHub\JuliaSet\JuliaSet\bin\Debug\JuliaSet.exe.config
+E:\Documents\GitHub\JuliaSet\JuliaSet\bin\Debug\JuliaSet.exe
+E:\Documents\GitHub\JuliaSet\JuliaSet\bin\Debug\JuliaSet.pdb
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\FractalGenerator.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.Properties.Resources.resources
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\FractalGenerator.csproj.GenerateResource.Cache
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.exe
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\JuliaSet.pdb
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\FractalGenerator.FractalDisplay.resources
+E:\Documents\GitHub\JuliaSet\JuliaSet\obj\Debug\FractalGenerator.Form1.resources

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuliaSet", "JuliaSet\JuliaSet.csproj", "{96BA3402-F8B0-4C6F-8654-B90F19C22B63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalGenerator", "JuliaSet\FractalGenerator.csproj", "{96BA3402-F8B0-4C6F-8654-B90F19C22B63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
