@@ -11,15 +11,9 @@ namespace FractalGenerator
     {
         private int w;
         private int h;
-        private static int zoom = 1;
         private static int max = 1000;
-        private static int moveX = 0;
-        private static int moveY = 0;
-        private static double cX = -0.7;
-        private static double cY = 0.27015;
         private static double MaxValueExtent = 2.0;
         private static double MaxNorm = MaxValueExtent * MaxValueExtent;
-        double zx, zy, temp;
 
         public Bitmap img;
 
@@ -70,7 +64,7 @@ namespace FractalGenerator
         {
             double m = 256;
             double contrast = 0.2;
-            return Color.FromArgb(5, 0, (int)(m * Math.Pow(v, contrast)));
+            return Color.FromArgb((int)(m * Math.Pow(v, contrast)), 0, 0);
         }
     }
 
