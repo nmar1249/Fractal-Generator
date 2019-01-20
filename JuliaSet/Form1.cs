@@ -35,7 +35,14 @@ namespace FractalGenerator
 
         private void Fractal_List_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fractalType = Fractal_List.SelectedItem.ToString();
+            try
+            {
+                fractalType = Fractal_List.SelectedItem.ToString();
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
 
         private void button_Generate_Click(object sender, EventArgs e)

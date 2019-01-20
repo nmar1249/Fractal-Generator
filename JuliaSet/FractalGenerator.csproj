@@ -55,6 +55,7 @@
     <Compile Include="FractalDisplay.Designer.cs">
       <DependentUpon>FractalDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="HSLColor.cs" />
     <Compile Include="JuliaSet.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
