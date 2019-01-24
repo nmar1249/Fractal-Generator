@@ -16,6 +16,7 @@ namespace FractalGenerator
 
         string height = "";
         string width = "";
+        string depth = "";
         string fractalType = "";
 
         public Form1()
@@ -33,11 +34,27 @@ namespace FractalGenerator
             height = Height_TextBox.Text;
         }
 
+        private void depth_textBox_TextChanged(object sender, EventArgs e)
+        {
+            depth = depth_textBox.Text;
+        }
+
+
         private void Fractal_List_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 fractalType = Fractal_List.SelectedItem.ToString();
+                if(fractalType == "Koch Curve")
+                {
+                    depth_label.Visible = true;
+                    depth_textBox.Visible = true;
+                }
+                else
+                {
+                    depth_label.Visible = false;
+                    depth_textBox.Visible = false;
+                }
             }
             catch(Exception ex)
             {
@@ -49,7 +66,12 @@ namespace FractalGenerator
         {
             try
             {
-                FractalDisplay fd = new FractalDisplay(int.Parse(width), int.Parse(height), fractalType);
+                FractalDisplay fd;
+                if (fractalType != "Koch Curve")
+                    fd = new FractalDisplay(int.Parse(width), int.Parse(height), fractalType);
+                else
+                    fd = new FractalDisplay(int.Parse(width), int.Parse(height), int.Parse(depth), fractalType);
+
                 fd.Activate();
                 fd.Show();
             }
@@ -58,5 +80,7 @@ namespace FractalGenerator
                 //put an error message here at some point
             }
         }
+
+        
     }
 }

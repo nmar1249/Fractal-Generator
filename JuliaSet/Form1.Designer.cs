@@ -35,12 +35,14 @@
             this.Height_TextBox = new System.Windows.Forms.TextBox();
             this.Fractal_List = new System.Windows.Forms.ListBox();
             this.button_Generate = new System.Windows.Forms.Button();
+            this.depth_label = new System.Windows.Forms.Label();
+            this.depth_textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 27);
+            this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -49,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 53);
+            this.label2.Location = new System.Drawing.Point(5, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
@@ -58,15 +60,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 87);
+            this.label3.Location = new System.Drawing.Point(5, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(42, 26);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Fractal Type";
+            this.label3.Text = "Fractal \r\nType";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Width_TextBox
             // 
-            this.Width_TextBox.Location = new System.Drawing.Point(92, 27);
+            this.Width_TextBox.Location = new System.Drawing.Point(50, 12);
             this.Width_TextBox.Name = "Width_TextBox";
             this.Width_TextBox.Size = new System.Drawing.Size(100, 20);
             this.Width_TextBox.TabIndex = 3;
@@ -74,7 +77,7 @@
             // 
             // Height_TextBox
             // 
-            this.Height_TextBox.Location = new System.Drawing.Point(91, 53);
+            this.Height_TextBox.Location = new System.Drawing.Point(49, 38);
             this.Height_TextBox.Name = "Height_TextBox";
             this.Height_TextBox.Size = new System.Drawing.Size(100, 20);
             this.Height_TextBox.TabIndex = 4;
@@ -85,8 +88,9 @@
             this.Fractal_List.FormattingEnabled = true;
             this.Fractal_List.Items.AddRange(new object[] {
             "Julia Set",
-            "Mandlebrot Set"});
-            this.Fractal_List.Location = new System.Drawing.Point(92, 87);
+            "Mandlebrot Set",
+            "Koch Curve"});
+            this.Fractal_List.Location = new System.Drawing.Point(49, 89);
             this.Fractal_List.Name = "Fractal_List";
             this.Fractal_List.Size = new System.Drawing.Size(115, 56);
             this.Fractal_List.TabIndex = 5;
@@ -102,11 +106,32 @@
             this.button_Generate.UseVisualStyleBackColor = true;
             this.button_Generate.Click += new System.EventHandler(this.button_Generate_Click);
             // 
+            // depth_label
+            // 
+            this.depth_label.AutoSize = true;
+            this.depth_label.Location = new System.Drawing.Point(7, 63);
+            this.depth_label.Name = "depth_label";
+            this.depth_label.Size = new System.Drawing.Size(36, 13);
+            this.depth_label.TabIndex = 7;
+            this.depth_label.Text = "Depth";
+            this.depth_label.Visible = false;
+            // 
+            // depth_textBox
+            // 
+            this.depth_textBox.Location = new System.Drawing.Point(49, 63);
+            this.depth_textBox.Name = "depth_textBox";
+            this.depth_textBox.Size = new System.Drawing.Size(100, 20);
+            this.depth_textBox.TabIndex = 8;
+            this.depth_textBox.Visible = false;
+            this.depth_textBox.TextChanged += new System.EventHandler(this.depth_textBox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 167);
+            this.Controls.Add(this.depth_textBox);
+            this.Controls.Add(this.depth_label);
             this.Controls.Add(this.button_Generate);
             this.Controls.Add(this.Fractal_List);
             this.Controls.Add(this.Height_TextBox);
@@ -130,5 +155,7 @@
         private System.Windows.Forms.TextBox Height_TextBox;
         private System.Windows.Forms.ListBox Fractal_List;
         private System.Windows.Forms.Button button_Generate;
+        private System.Windows.Forms.Label depth_label;
+        private System.Windows.Forms.TextBox depth_textBox;
     }
 }

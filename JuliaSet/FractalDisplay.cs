@@ -14,13 +14,15 @@ namespace FractalGenerator
     {
         string type = "";
         public Bitmap image;
+        public int depth;
 
         public FractalDisplay(int w, int h, string t)
         {
             try
             {
                 InitializeComponent();
-                this.Size = new Size(w, h);
+                this.Size = new Size(w + 41, h + 64);
+                fractalBox.Size = new Size(w, h);
                 Text = t;
                 type = t;
             }
@@ -30,7 +32,26 @@ namespace FractalGenerator
             }
         }
 
-        private void FractalDisplay_Paint(object sender, PaintEventArgs e)
+        //this one generates a fractal with depth (like koch curves)
+        public FractalDisplay(int w, int h, int d, string t)
+        {
+            try
+            {
+                InitializeComponent();
+                this.Size = new Size(w + 41, h + 64);
+                fractalBox.Size = new Size(w, h);
+                depth = d;
+                Text = t;
+                type = t;
+            }
+            catch (Exception e)
+            {
+                this.Close();
+            }
+        }
+
+
+        private void fractalBox_Paint(object sender, PaintEventArgs e)
         {
             if(type == "Julia Set")
             {
@@ -39,6 +60,10 @@ namespace FractalGenerator
             else if(type == "Mandlebrot Set")
             {
                 GenerateMandlebrotSet(e);
+            }
+            else if(type == "Koch Curve")
+            {
+                GenerateKochTriangle(e);
             }
 
         }
@@ -63,5 +88,19 @@ namespace FractalGenerator
 
             g.DrawImage(set.img, 0, 0);
         }
+
+        private void GenerateKochTriangle(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            KochCurve kc = new KochCurve(Width, Height);
+            
+            kc.generate(depth);
+
+
+            g.DrawImage(kc.img, 0, -70);
+            kc.img.Save("test.png");
+        }
+
+       
     }
 }
