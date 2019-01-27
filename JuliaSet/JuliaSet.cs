@@ -9,7 +9,7 @@ namespace FractalGenerator
 {
     //this class creates a julia set based on the specified w and h
     //an image is stored in a bitmap var which can be saved using a function
-    class JuliaSet
+    public class JuliaSet
     {
         private int w;
         private int h;
@@ -32,7 +32,22 @@ namespace FractalGenerator
             img = new Bitmap(w, h);
        }
 
-       
+        public int W
+        {
+            get { return w; }
+            set { w = value; }
+        }
+        public int H
+        {
+            get { return h; }
+            set { h = value; }
+        }
+        public Bitmap Img
+        {
+            get { return img; }
+            set { img = value; }
+        }
+
         public void generate()
         {
             var colors = (from c in Enumerable.Range(0, 256)
@@ -56,11 +71,6 @@ namespace FractalGenerator
                     img.SetPixel(x, y, colors[i]);
                 }
             }
-        }
-
-        public void save(string fileName)
-        {
-            img.Save(fileName);
         }
     }
 }

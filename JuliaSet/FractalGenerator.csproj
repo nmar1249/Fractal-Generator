@@ -67,6 +67,7 @@
     <Compile Include="MandlebrotSet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SierpinskiTriangle.cs" />
     <EmbeddedResource Include="FractalDisplay.resx">
       <DependentUpon>FractalDisplay.cs</DependentUpon>
     </EmbeddedResource>

@@ -77,7 +77,8 @@ namespace FractalGenerator
             }
             catch(Exception ex)
             {
-                //put an error message here at some point
+                MessageBox.Show("Please make sure that all inputs are valid integers.", "Error",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 

@@ -71,7 +71,7 @@
             // 
             this.Width_TextBox.Location = new System.Drawing.Point(50, 12);
             this.Width_TextBox.Name = "Width_TextBox";
-            this.Width_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Width_TextBox.Size = new System.Drawing.Size(114, 20);
             this.Width_TextBox.TabIndex = 3;
             this.Width_TextBox.TextChanged += new System.EventHandler(this.Width_TextBox_TextChanged);
             // 
@@ -79,7 +79,7 @@
             // 
             this.Height_TextBox.Location = new System.Drawing.Point(49, 38);
             this.Height_TextBox.Name = "Height_TextBox";
-            this.Height_TextBox.Size = new System.Drawing.Size(100, 20);
+            this.Height_TextBox.Size = new System.Drawing.Size(115, 20);
             this.Height_TextBox.TabIndex = 4;
             this.Height_TextBox.TextChanged += new System.EventHandler(this.Height_TextBox_TextChanged);
             // 
@@ -89,7 +89,8 @@
             this.Fractal_List.Items.AddRange(new object[] {
             "Julia Set",
             "Mandlebrot Set",
-            "Koch Curve"});
+            "Koch Curve",
+            "Sierpinski Triangle"});
             this.Fractal_List.Location = new System.Drawing.Point(49, 89);
             this.Fractal_List.Name = "Fractal_List";
             this.Fractal_List.Size = new System.Drawing.Size(115, 56);
@@ -120,7 +121,7 @@
             // 
             this.depth_textBox.Location = new System.Drawing.Point(49, 63);
             this.depth_textBox.Name = "depth_textBox";
-            this.depth_textBox.Size = new System.Drawing.Size(100, 20);
+            this.depth_textBox.Size = new System.Drawing.Size(115, 20);
             this.depth_textBox.TabIndex = 8;
             this.depth_textBox.Visible = false;
             this.depth_textBox.TextChanged += new System.EventHandler(this.depth_textBox_TextChanged);

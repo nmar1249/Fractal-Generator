@@ -13,8 +13,14 @@ namespace FractalGenerator
         private List<PointF> init;
         private List<float> genTheta;
         private float scaleFactor;
-        public Bitmap img;
+        private Bitmap img;
         private Graphics graph;
+
+        public Bitmap Img
+        {
+            get { return img; }
+            set { img = value; }
+        }
 
         public KochCurve(int width, int height)
         {
@@ -46,7 +52,7 @@ namespace FractalGenerator
 
         }
 
-        public void generate(int d)
+        public void Generate(int d)
         {
             for(int i = 1; i < init.Count; i++)
             {
@@ -61,6 +67,7 @@ namespace FractalGenerator
             }
         }
 
+        //draw the edges recursively, looping until you have reached the specified depth
         public void DrawEdge(int depth, ref PointF p1, float theta, float dist)
         {
             if(depth == 0)

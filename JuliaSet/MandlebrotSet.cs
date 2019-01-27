@@ -13,10 +13,10 @@ namespace FractalGenerator
         private int w;
         private int h;
         private static double max = 80;
-        private static double MaxValueExtent = 1.25;
+        private static double MaxValueExtent = 1.5;
         private static double MaxNorm = MaxValueExtent * MaxValueExtent;
 
-        public Bitmap img;
+        private Bitmap img;
 
         public MandlebrotSet(int width, int height)
         {
@@ -25,7 +25,23 @@ namespace FractalGenerator
             img = new Bitmap(w, h);
         }
 
-        public void generate()
+        public int W
+        {
+            get { return w; }
+            set { w = value; }
+        }
+        public int H
+        {
+            get { return h; }
+            set { h = value; }
+        }
+        public Bitmap Img
+        {
+            get { return img; }
+            set { img = value; }
+        }
+
+        public void Generate()
         {
             double s = 2 * MaxValueExtent / Math.Min(w, h);
             for (int y = 0; y < h; y++)
